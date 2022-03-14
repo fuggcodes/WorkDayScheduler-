@@ -6,12 +6,10 @@ For this project jQuery was used to create a day planner for a user to schedule 
 
 ## Deployed Link
 
-[Deployed](https://fuggcodes.github.io/CodeQuiz/)
+[Deployed](https://fuggcodes.github.io/WorkDayScheduler-/)
 
 ## ScreenShot
 
-![Starting Page](./assets/startscreen.png)
+![Starting Page](startpage.png)
 
-![Questions](./assets/questions.png)
-
-![Scores](./assets/scores.png)
+![Inspect Page](inspectpage.png)
