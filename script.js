@@ -1,7 +1,7 @@
 // save button 
 let saveBtn = $("");
 
-// get local storage will populate the input fields with any stored data...
+// get local storage
 function getLocalStorage () {
 let key9 = JSON.parse(localStorage.getItem("storedItem9"));
 $("#hour-9").val(key9);
@@ -31,32 +31,32 @@ let key17 = JSON.parse(localStorage.getItem("storedItem17"));
 $("#hour-17").val(key17);
 }
 
-//  the current day is displayed at the top of the calendar...
+//  current day is displayed in header area
 let currentDay = moment().format('MMMM Do YYYY');
 $("#currentDay").text(currentDay);
 
-//  determine the current hour... 
+// current hour 
 let now = new Date();
 let hour = now.getHours();
 
-// CSS styling based on the current hour...
+// CSS for past, present, future
 for (let i = 9; i < 18; i++) {
     let currentId = "#hour-" + i;
     let currentHourBlock = $(currentId);
-    // in the past...
+    // past
     if (i < hour) {
         currentHourBlock.addClass("past");
     }
-    // in the future...
+    // future
     else if (i > hour) {
         currentHourBlock.addClass("future");
     }
-    // this is when i is equal to current hour...
+    // current
     else {
         currentHourBlock.addClass("present");
     }
 }
-// here is the on click event to execute save to local storage functionality...
+// save to local storage 
 $(".saveBtn").on("click", function (event) {
     event.preventDefault();
     let buttonID = $(this).attr("id");
