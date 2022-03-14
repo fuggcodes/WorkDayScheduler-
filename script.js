@@ -1,7 +1,8 @@
+// save button 
 let saveBtn = $("");
 
-// local storage will populate the input fields with any stored data...
-function retrieveLocalStorage () {
+// get local storage will populate the input fields with any stored data...
+function getLocalStorage () {
 let key9 = JSON.parse(localStorage.getItem("storedItem9"));
 $("#hour-9").val(key9);
 
@@ -88,4 +89,4 @@ $(".saveBtn").on("click", function (event) {
     localStorage.setItem("storedItem17", JSON.stringify(userInput17))
 });
 
-retrieveLocalStorage ()
+getLocalStorage ()
